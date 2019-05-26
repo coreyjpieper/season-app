@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import SeasonDisplay from './SeasonDisplay';
 
 // const App = () => {
 //   window.navigator.geolocation.getCurrentPosition(
@@ -38,7 +39,7 @@ class App extends React.Component {
     } else if (!this.state.lat) { // if lat has not been updated
       return <div> Loading... </div>;
     } else { // no errors, lat has been updated
-      return <div>Latitude: {this.state.lat}</div>;
+      return <SeasonDisplay lat={this.state.lat} />;
     }
   }
 }
