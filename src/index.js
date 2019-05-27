@@ -25,14 +25,8 @@ class App extends React.Component {
       (position) => this.setState({ lat: position.coords.latitude }),
       (err) => this.setState({ error: err.message })
     );
-    console.log("My component was rendered to the screen");
   }
 
-  componentDidUpdate() {
-      console.log("My component was just updated - it rerendered");
-  }
-
-  // Have to define render
   render() {
     if (this.state.error) { // if error occurs
       return <div>An error occured: {this.state.error}</div>;
